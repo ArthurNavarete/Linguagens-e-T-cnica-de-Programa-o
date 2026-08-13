@@ -1,0 +1,1 @@
+<img widht="100%" src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:0f0c29,50:302b63,100:24243e&text=Linguagens%20&textBg=false&desc=E%20Técnicas%20de%20Programação&fontColor=00ff9d&escAlignY=55&fontAlignY=33&descSize=30"/>
