@@ -56,9 +56,9 @@ int main(int argc, char *argv[]) {
 	
 	printf("Binario : %d%d%d%d%d%d%d\n", bit1, bit2, bit3, bit4, bit5, bit6, bit7);
 	
-	/*Faça um programa que leia, o salário fixo e o valor total em vendas de um vendedor.
-Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, mostre o total a
-receber no final do mês, com duas casas decimais */
+	/*FaÃ§a um programa que leia, o salÃ¡rio fixo e o valor total em vendas de um vendedor.
+Sabendo que este vendedor ganha 15% de comissÃ£o sobre suas vendas efetuadas, mostre o total a
+receber no final do mÃªs, com duas casas decimais */
 
 
 	float salario, vendas, comissao, total;
@@ -74,8 +74,28 @@ receber no final do mês, com duas casas decimais */
 	
 	printf("\nTotal a receber : R$ %.2f\n", total);	
 	
-	/*Elabore um programa que peça ao usuário para digitar 4 valores. E mostre na tela a soma, a média e o
-produtório desses valores */
+	/*Elabore um programa que peÃ§a ao usuÃ¡rio para digitar 4 valores. E mostre na tela a soma, a mÃ©dia e o
+produtÃ³rio desses valores */
+
+	float n1, n2, n3, n4;
+	float soma, media, produto;
+	
+	printf ("\n Digite o primeiro numero :");
+	scanf("%f", &n1);
+	printf ("\n Digite o segundo numero :");
+	scanf("%f", &n2);
+	printf ("\n Digite o terceiro numero :");
+	scanf("%f", &n3);
+	printf ("\n Digite o quarto numero :");
+	scanf("%f", &n4);
+	
+	soma = n1 + n2 + n3 + n4;
+	media = soma / 4; 
+	produto = n1 * n2 * n3 * n4;
+	
+	printf("\nSoma: %.2f\n", soma);
+    printf("Media: %.2f\n", media);
+    printf("Produtorio: %.2f\n", produto);
 	
 	
 	
