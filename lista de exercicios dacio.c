@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 /* programa que ira ler dois numeros inteiros e depois os imprima na ordem inversa que foram inseridos */
 
@@ -21,11 +22,16 @@ int main(int argc, char *argv[]) {
 	/* ler um valor do tipo double e depois imprima na forma de notacao cientifica */
 	
 	double numero; 
+	int exp;
 	
 	printf("\nInsira o valor do numero que deseja converter para notacao cientifca: ");
-	scanf("%le", &numero);
+	scanf("%lf", &numero);
 	
-	printf("O numero convertido sera : %e", numero);
+	 while(numero > 10){
+        numero = numero / 10;
+        exp++;
+     }   
+	 printf("Notacao cientifica: %.2lfx10^%d\n", numero, exp);;
 	
 	/* insira um numero n e mostre na tela seu valor em binario */
 	
@@ -96,26 +102,50 @@ produtório desses valores */
 	printf("\nSoma: %.2f\n", soma);
     printf("Media: %.2f\n", media);
     printf("Produtorio: %.2f\n", produto);
+    
+    /*  lê uma idade em dias e retorna a mesma em anos e meses */
+    
+    int idade_dias, meses, anos, dias;
+    printf("Insira sua idade em dias: ");
+    scanf("%d", &idade_dias);
+
+    anos = idade_dias / 365;
+    meses = (idade_dias % 365) / 30;
+    dias = (idade_dias % 365) % 30;
+
+    printf("Sua idade baseada nos dados e de %d anos, %d meses e %d dias\n", anos, meses, dias);
+
+
+	/*calcula o volume de uma esfera */
+
+    float raio, pi, volume;
+    pi = 3.14159;
+    printf("Insira o raio para o cálculo do volume da esfera: ");
+    scanf("%f", &raio);
+
+    volume = (4.0/3) * pi * pow(raio, 3);
+    printf("Volume = %.2f\n", volume);
+    
+    
+    /*aplica distância euclidiana com os pontos escolhidos pelo usuário */
+
+    int x1, y1, x2, y2, quad1, quad2;
+    float dist_euclid;
+
+    printf("Insira os pontos da primeira coordenada: ");
+    scanf("%d %d", &x1, &y1);
+
+    printf("Insira os pontos da segunda coordenada: ");
+    scanf("%d %d", &x2, &y2);
+
+    quad1 = x2 - x1;
+    quad2 = y2 - y1;
+
+    dist_euclid = sqrt(pow(quad1, 2) + pow(quad2, 2));
+    printf("Distância euclidiana = %.2f\n", dist_euclid);
+
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+			
 	
 	return 0;
 }
