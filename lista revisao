@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+
+    int cpf1, cpf2, cpf3, cpf4, cpf5, cpf6, cpf7, cpf8, cpf9, cpf10, cpf11;
+    int digito1, digito2;
+
+    printf("Digite seu CPF: ");
+
+    scanf("%1d%1d%1d.%1d%1d%1d.%1d%1d%1d-%1d%1d",&cpf1, &cpf2, &cpf3, &cpf4, &cpf5, &cpf6,&cpf7, &cpf8, &cpf9, &cpf10, &cpf11);
+    printf("\nCPF informado: %d%d%d.%d%d%d.%d%d%d-%d%d\n", cpf1, cpf2, cpf3, cpf4, cpf5, cpf6, cpf7, cpf8, cpf9, cpf10, cpf11);
+
+    digito1 = (((cpf1 * 10) + (cpf2 * 9) +  (cpf3 * 8) +  (cpf4 * 7) +  (cpf5 * 6) +  (cpf6 * 5) +  (cpf7 * 4) +   (cpf8 * 3) + (cpf9 * 2)) * 10) % 11;
+    if (digito1 == 10) {
+        digito1 = 0;
+    }
+
+    digito2 = (((cpf1 * 11) +(cpf2 * 10) +(cpf3 * 9) + (cpf4 * 8) + (cpf5 * 7) + (cpf6 * 6) + (cpf7 * 5) +  (cpf8 * 4) + (cpf9 * 3) +  (digito1 * 2)) * 10) % 11;
+    if (digito2 == 10) {
+        digito2 = 0;
+    }
+
+    if (digito1 == cpf10 && digito2 == cpf11) {
+
+        printf("\nCPF valido!\n");
+        printf("Digitos verificadores: %d e %d\n", digito1, digito2);
+
+    } else {
+
+        printf("\nCPF invalido!\n");
+        printf("Digitos calculados: %d e %d\n", digito1, digito2);
+    }
+
+    return 0;
+}
